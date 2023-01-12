@@ -1,0 +1,25 @@
+
+
+// install go
+// go install go.k6.io/xk6/cmd/xk6@latest
+// xk6 build v0.36.0 --with github.com/avitalique/xk6-file@latest
+
+// run : ./k6 run script.js
+
+import file from 'k6/x/file';
+import http from 'k6/http';
+
+// import http, { file } from 'k6/http';
+
+const filepath = 'sample-output.txt';
+
+export default function () {
+    
+    let url = "https://reqres.in/api/users?page=2";
+    const response = http.get(url);
+
+    console.log(`Full Response: ${JSON.stringify(response)}`)
+
+    file.appendString(filepath, `${response.body}`);
+    // file.appendString(filepath, `Second line. VU: ${__VU}  -  ITER: ${__ITER}`);
+}

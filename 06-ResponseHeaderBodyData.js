@@ -31,7 +31,7 @@ export default function () {
     console.log(`Total Object Number : ${body.total}`)
 
     console.log(`-----------------Body Data---------------------`)
-    // console.log(`Full Body Data : ${JSON.stringify(body.data)}`)
+    console.log(`Full Body Data : ${JSON.stringify(body.data)}`)
     let data = JSON.stringify(body.data)
     console.log(`Full Data : ${data}`)
     let d = JSON.parse(data)

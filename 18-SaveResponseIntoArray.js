@@ -24,11 +24,14 @@ export function printData() {
 
 
     for(var i = 0; i<resArray.length ; i++){
+
         // console.log(`ID: ${resArray[i].id}\tName: ${resArray[i].name}`) // For All
-        if( `${resArray[i].name}` === 'fuchsia rose'){
-            console.log(`ID: ${resArray[i].id}\tName: ${resArray[i].name}`)
-            break;
-        }
+        console.log(`${JSON.stringify(resArray[i].name)}`) // For all Name
+        // if( `${resArray[i].name}` === 'fuchsia rose'){
+        //     console.log(`ID: ${resArray[i].id}\tName: ${resArray[i].name}`)
+        //     break;
+        // }
+
     }
 }
 // Send To another js. if want to print

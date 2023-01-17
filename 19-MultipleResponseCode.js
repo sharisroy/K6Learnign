@@ -15,9 +15,9 @@ var k2 = 'https://httpbin.test.k6.io/status/400'; // return 400 code
 // Set accepted code 
 http.setResponseCallback(
     http.expectedStatuses(401, 200)
-    );
+);
 
-export default function(){
+export default function () {
     var res1 = http.get(url1)
     console.log(`${res1.status}`)
     var res2 = http.get(url2)
